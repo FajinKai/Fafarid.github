@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sky Hotel</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background:rgb(2, 42, 75);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px; 
+    background: linear-gradient(to top, #001B79, #2980b9);
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgb(0, 0, 0);
+    text-align: center;
+}
+
+h2 {
+    color: #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Admin</h2>
+        <form action="cover.html" method="post" onsubmit="return validateForm()">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+    
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                <br><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+    <script>
+        function validateForm() {
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("psw").value;
+    
+            if (username === "fajin" && password === "123") {
+                return true; 
+            } else {
+                alert("Username Atau Password Salah. Coba Lagi.");
+                return false; 
+            }
+        }
+    </script>
+</body>
+</html>
